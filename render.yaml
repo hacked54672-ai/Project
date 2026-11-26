@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: project-hvt1
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: SECRET
+        generateValue: true
+      - key: NODE_VERSION
+        value: 20.11.1
