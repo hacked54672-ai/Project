@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: lisa-relay
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: SECRET
+        generateValue: true
