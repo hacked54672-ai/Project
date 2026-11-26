@@ -1,8 +1,0 @@
-services:
-  - type: web
-    name: lisa-relay
-    runtime: node
-    plan: free
-    buildCommand: npm install
-    startCommand: node server.js
-    healthCheckPath: /health
